@@ -18,7 +18,7 @@ function Presenters({mobile}){
                         return <p key={key} className='text-bluegray-800'><i className="font-bold pi pi-user mx-2 text-primary"></i>{value}</p>
                     })
                 }
-            <Button onClick={()=>{window.close()}} className="mt-0 mx-auto block p-button-rounded p-button-text" icon="pi pi-power-off"></Button>
+            {/* <Button onClick={()=>{window.close()}} className="mt-0 mx-auto block p-button-rounded p-button-text" icon="pi pi-power-off"></Button> */}
             </div>
         </>
     )
