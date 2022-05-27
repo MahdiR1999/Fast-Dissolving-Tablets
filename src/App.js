@@ -2,7 +2,7 @@
 import React,{useState,useEffect} from 'react';
 
 //React Router
-import { Routes, Route,useNavigate,useLocation} from "react-router-dom";
+import { Routes, Route,useNavigate,useLocation,Navigate} from "react-router-dom";
 
 //Prime React
 import "primereact/resources/themes/lara-light-indigo/theme.css";
@@ -112,6 +112,7 @@ function App() {
                   <Route path='Brands' element={<Brands/>}></Route>
                   <Route path='Conc' element={<Conclusion/>}></Route>
                   <Route path='Refs' element={<References/>}></Route>
+                  <Route path='*' element={<Navigate to="/" replace />}></Route>
                 </Routes>
               </div>
             </div>
@@ -150,6 +151,7 @@ function App() {
                     <Route path='Brands' element={<Brands/>}></Route>
                     <Route path='Conc' element={<Conclusion/>}></Route>
                     <Route path='Refs' element={<References/>}></Route>
+                    <Route path='*' element={<Navigate to="/" replace />}></Route>
                   </Routes>
                 </div>
                 :null
