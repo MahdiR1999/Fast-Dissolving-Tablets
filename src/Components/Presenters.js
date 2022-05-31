@@ -3,9 +3,9 @@ import { Divider } from 'primereact/divider';
 import {useState} from "react";
 function Presenters({mobile}){
     const [items] = useState([
-        'Shadmehr Ghorbani',
-        'Mahdi Raef',
-        'Mahdi Raeiszadeh'
+        'Shadmehr Ghorbani - user',
+        'Mahdi Raef - code',
+        'Mahdi Raeiszadeh - user'
     ]);
     return (
         <>
@@ -15,7 +15,7 @@ function Presenters({mobile}){
             <div className={`justify-content-center mx-auto ${(mobile === true)?"text-center":null}`}>
                 {
                     items.sort().map((value,key)=>{
-                        return <p key={key} className='text-bluegray-800'><i className="font-bold pi pi-user mx-2 text-primary"></i>{value}</p>
+                        return <p key={key} className='text-bluegray-800'><i className={`font-bold pi pi-${value.split(" - ")[1]} mx-2 text-primary`}></i>{value.split(" - ")[0]}</p>
                     })
                 }
             {/* <Button onClick={()=>{window.close()}} className="mt-0 mx-auto block p-button-rounded p-button-text" icon="pi pi-power-off"></Button> */}
